@@ -16,7 +16,7 @@ class Stats(models.Model):
         return self.title
     
 class Partner(models.Model):
-    logo = models.FileField(validators=[FileExtensionValidator(['pdf'])],upload_to="partner-logos/")
+    logo = models.FileField(validators=[FileExtensionValidator(['webp'])],upload_to="partner-logos/")
     title = models.CharField(max_length=255)
     about = models.TextField()
     slug = models.SlugField(unique=True,null=True,blank=True)
