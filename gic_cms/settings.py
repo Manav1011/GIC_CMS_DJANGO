@@ -41,8 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'storages',
-    'Home',
     "CustomUser",
+    'Home',
     "Notifications",
     "documents"
 ]
