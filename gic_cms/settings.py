@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-+&yfb2_fsnrme#7x5h(!unz85sixgv^nf4tx8m*-rzop=%34ir
 DEBUG = True
 load_dotenv()
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost','13.201.72.246','gtuinnovationcouncil.ac.in']
 
 
 # Application definition
