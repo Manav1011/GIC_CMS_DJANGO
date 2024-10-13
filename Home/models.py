@@ -55,4 +55,4 @@ class ImageGallery(models.Model):
         super(ImageGallery, self).save(*args, **kwargs) 
 
     def __str__(self):
-        return self.titled
+        return self.title
