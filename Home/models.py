@@ -43,3 +43,16 @@ class Quote(models.Model):
     
     def __str__(self):
         return self.author
+
+class ImageGallery(models.Model):
+    title = models.CharField(max_length=255)
+    image = models.FileField(validators=[FileExtensionValidator(['webp','png','jpg'])],upload_to="image-gallery/")
+    slug = models.SlugField(unique=True,null=True,blank=True)
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = generate_unique_hash()
+        super(ImageGallery, self).save(*args, **kwargs) 
+
+    def __str__(self):
+        return self.titled
